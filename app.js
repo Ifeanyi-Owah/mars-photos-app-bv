@@ -10,10 +10,7 @@ var express = require("express"),
 
       app.use(cors());
 
-    // var s = 1000;
-    // var cam = "mast";
   
-    
     app.post("/handleApi", (req, res)=>{
     let {sol, camera} = req.body;
        axios.get(`https://mars-photos.herokuapp.com/api/v1/rovers/Curiosity/photos?sol=${sol}&camera=${camera}`)
